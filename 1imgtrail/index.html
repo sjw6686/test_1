@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top" style="height: 100vh;background: #ccc;"></div><!-- divtag에 style작성가능하나 권장x -->
+    <div class="main">
+        <h1>Image-Trail</h1>
+        <div class="img img_1"></div>
+        <div class="img img_2"></div>
+        <div class="img img_3"></div>
+        <div class="img img_4"></div>
+        <div class="img img_5"></div>
+    </div>
+    <div class="top" style="height: 100vh;background: #555;"></div>
+    <script>
+        var img1=document.querySelector(".img_1"),
+            img2=document.querySelector(".img_2"),
+            img3=document.querySelector(".img_3"),
+            img4=document.querySelector(".img_4"),
+            img5=document.querySelector(".img_5"),
+            main=document.querySelector(".main");
+        main.addEventListener('mousemove',function(e){
+            img1.setAttribute("style","top:" + (e.clientY - 250) + "px;left:" + (e.clientX - 200) + "px");
+            img2.setAttribute("style","top:" + (e.clientY - 250) + "px;left:" + (e.clientX - 200) + "px");
+            console.log(e.clientY);
+            img3.setAttribute("style","top:" + (e.clientY - 250) + "px;left:" + (e.clientX - 200) + "px");
+            console.log(e.clientY);
+            img4.setAttribute("style","top:" + (e.clientY - 250) + "px;left:" + (e.clientX - 200) + "px");
+            console.log(e.clientY);
+            img5.setAttribute("style","top:" + (e.clientY - 250) + "px;left:" + (e.clientX - 200) + "px");
+            console.log(e.clientY);
+        })
+    </script>
+</body>
+</html>
